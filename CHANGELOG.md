@@ -1,5 +1,9 @@
 # 1_MongoDB Cookbook ChangeLog
 
+# 0.2.0
+
+- Installed the mongodb-org package
+
 # 0.1.2
 
 - Removed integration build with Travis CI.  Initial subscription exceeded

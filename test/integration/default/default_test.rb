@@ -1,18 +1,13 @@
-# # encoding: utf-8
-
-# Inspec test for recipe 1_MongoDB::default
-
-# The Inspec reference, with examples and extensive documentation, can be
-# found at http://inspec.io/docs/reference/resources/
-
-unless os.windows?
-  # This is an example test, replace with your own test.
-  describe user('root'), :skip do
-    it { should exist }
-  end
+describe file('/etc/yum.repos.d/mongodb-org-3.6.repo') do
+  it { should exist }
+  it { should be_readable }
+  its('content') { should match 'MongoDB Repository' }
+  its('content') { should match '3.6' }
+  its('content') { should match 'gpgcheck' }
+  its('content') { should match 'enabled' }
+  its('content') { should match 'gpgkey' }
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+describe package('mongodb-org') do
+  it { should be_installed }
 end
