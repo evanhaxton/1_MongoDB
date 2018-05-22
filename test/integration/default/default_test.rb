@@ -11,3 +11,15 @@ end
 describe package('mongodb-org') do
   it { should be_installed }
 end
+
+describe file('/etc/selinux/config') do
+  it { should exist }
+  it { should be_readable }
+  its('content') { should match 'permissive' }
+end
+
+describe file('/etc/mongod.conf') do
+  it { should exist }
+  it { should be_readable }
+  its('content') { should match 'dbPath' }
+end

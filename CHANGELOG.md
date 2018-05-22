@@ -1,5 +1,9 @@
 # 1_MongoDB Cookbook ChangeLog
 
+#0.3.0
+
+- Enabled mongod as a service
+
 # 0.2.0
 
 - Installed the mongodb-org package
