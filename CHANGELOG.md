@@ -1,6 +1,18 @@
 # 1_MongoDB Cookbook ChangeLog
 
-#0.3.0
+# 0.5.0
+
+- Added user authorization to mongo
+
+# 0.4.1
+
+- Added admin user to mongo
+
+# 0.4.0
+
+- Disabled transparent hugepages and transparent defrag
+
+# 0.3.0
 
 - Enabled mongod as a service
 
