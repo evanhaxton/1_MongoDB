@@ -27,13 +27,8 @@ end
 # optimization for mongo client
 describe file('/etc/init.d/disable-transparent-hugepages') do
   it { should exist }
-
-  describe command('chkconfig --list') do
-    its('stdout') { should match(/disable-transparent-hugepage /) }
-  end
 end
 
-# test for user authentication
-describe command('mongo') do
-  its('stdout') { should_not match(/WARNING: Access control/) }
+describe command('chkconfig --list') do
+  its('stdout') { should match(/disable-transparent-hugepages/) }
 end

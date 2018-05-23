@@ -5,6 +5,7 @@
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
 # optimization for mongo client
+
 template '/etc/init.d/disable-transparent-hugepages' do
   source 'disable-transparent-hugepages.erb'
   mode 0755
@@ -39,11 +40,19 @@ end
 
 # execute add user command
 execute 'mongo' do
-  command '/usr/bin/mongo < /home/vagrant/mongo-add-admin-user.js'
+  command '/usr/bin/mongo < /home/vagrant/mongo-add-admin-user.js &&
+  touch /home/vagrant/.upgraded'
+  creates '/home/vagrant/.upgraded'
+  not_if { ::File.exist?('/home/vagrant/.upgraded') }
 end
 
 # enable user authorization
 template '/etc/mongod.conf' do
   source 'mongod.conf.erb'
   mode 0644
+end
+
+# restart the process to enable user authentication
+service 'mongod' do
+  action [:stop, :start]
 end

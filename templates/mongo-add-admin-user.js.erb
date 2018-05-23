@@ -1,7 +1,13 @@
+var userExist = 0;
+
 use admin
+userExist = db.system.users.find({user:"superAdmin"}).count();
+if (userExist == 0) {
 db.createUser(
   {
     user: "superAdmin",
     pwd: "admin123",
     roles: [ { role: "root", db: "admin" } ]
   })
+
+}
