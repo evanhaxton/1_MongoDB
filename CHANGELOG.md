@@ -1,5 +1,17 @@
 # 1_MongoDB Cookbook ChangeLog
 
+# 0.6.0
+
+- Cleaned up environment and completed documentation requirements
+
+# 0.5.2
+
+- Corrected spelling mistakes and typos.  Validated cookbook can be restarted
+
+# 0.5.1
+
+- Corrected issue with add user to MongoDB.  The user persists after creation
+
 # 0.5.0
 
 - Added user authorization to mongo

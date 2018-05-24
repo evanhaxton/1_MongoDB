@@ -1,8 +1,0 @@
-describe command('chkconfig --list') do
-  its('stdout') { should match(/disable-transparent-hugepage /) }
-end
-
-# test for user authentication
-describe command('mongo') do
-  its('stdout') { should_not match(/WARNING: Access control/) }
-end

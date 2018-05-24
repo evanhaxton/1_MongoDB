@@ -4,7 +4,7 @@ maintainer_email 'ehaxton@gmail.com'
 license 'apachev2'
 description 'Installs/Configures a simple MongoDB installation'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '0.5.1'
+version '0.6.0'
 chef_version '>= 12.14' if respond_to?(:chef_version)
 
 # The `issues_url` points to the location where issues for this cookbook are
