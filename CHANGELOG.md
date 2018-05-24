@@ -1,5 +1,9 @@
 # 1_MongoDB Cookbook ChangeLog
 
+# 0.6.1
+
+- Aline documentation
+
 # 0.6.0
 
 - Cleaned up environment and completed documentation requirements

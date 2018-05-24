@@ -46,12 +46,16 @@ A `.kitchen.yml` file is provided. Run `kitchen test` to verify this cookbook.
 The kitchen test cycle is composed of the following steps:  
 
 o `kitchen converge`.  This creates an instance of the deployed image
-o `kitchen verify`.    This command verifies that the deployed instance is operating
-   as expected.
+
+o `kitchen verify`.    This command verifies that the deployed instance is operating as expected.
+
 o `kitchen destroy`.   Will remove the deployed instance
 
+
 Optional commands:
+
 o `kitchen login`      Will allow the user to connect to a deployed image
+
 
 Environment validation
 ======================
@@ -62,13 +66,19 @@ o Run `mongo` to produce
 MongoDB shell version v3.6.5
 connecting to: mongodb://127.0.0.1:27017
 MongoDB server version: 3.6.5
+
 Welcome to the MongoDB shell.
+
 For interactive help, type "help".
+
 For more comprehensive documentation, see
+
 	http://docs.mongodb.org/
+
 Questions? Try the support group
+
 	http://groups.google.com/group/mongodb-user
->
+
 
 Please note that you should not generate any warnings or errors during connection
 
@@ -109,6 +119,7 @@ o Run `show collections`
 > show collections
 
 system.users
+
 system.version
 
 o Run `show users`
@@ -117,14 +128,23 @@ o Run `show users`
 
 {
    "id": "admin.superAdmin",
-   "user": "superAdmin",
+
+   "user": :superAdmin"
+
    "db": "admin",
+
    "roles" : [
+
             {
+
               "role" : "root",
+
               "db" : "admin"
+
             }
+
    ]
+   
 }
 
 For further information on other MongoDB commands please consult the user documentation
