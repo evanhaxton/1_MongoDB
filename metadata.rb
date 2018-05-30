@@ -3,7 +3,7 @@ maintainer 'Evan Haxton'
 maintainer_email 'ehaxton@gmail.com'
 license 'apachev2'
 description 'Installs/Configures a simple MongoDB installation'
-long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+long_description 'Please refer to README.md file for further details'
 version '0.6.1'
 chef_version '>= 12.14' if respond_to?(:chef_version)
 
